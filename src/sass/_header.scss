@@ -1,0 +1,37 @@
+header.full-width{
+  height: 100vh;
+  background-image:
+  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+  url('../images/background.webp');
+  background-position: center;
+  background-size: cover; 
+  background-repeat: no-repeat;
+  position: relative;
+
+
+  .header-wrapper{
+    position: relative;
+    border: 1px solid green;
+  }
+
+  .logo{
+    color: $color-light;
+    border: 1px solid red;
+    // position: absolute;
+    margin-top: 20px;
+    
+    .logo-title{
+      @include font-black();
+      text-transform: uppercase;
+      letter-spacing: 7px;
+      margin: 0;
+    }
+
+    .logo-subtitle{
+      @include font-bold();
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin: 0;
+    }
+  }
+}

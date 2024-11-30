@@ -3,8 +3,14 @@ $color-dark: #000;
 $color-light: #fff;
 $color-main: #bea67c;
 
-$font-main: 'Source Sans Pro';
+$font-main: 'Source Sans Pro',sans-serif;
 $transition: all .3s;
+
+/*Global*/
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: $font-main;
+}
 
 /*Mixins*/
 @mixin flex($flex-direction, $align-items, $justify-content) {

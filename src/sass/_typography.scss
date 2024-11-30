@@ -1,0 +1,25 @@
+@mixin font-regular(){
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+}
+
+@mixin font-semibold(){
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+}
+
+@mixin font-bold(){
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+}
+
+@mixin font-black(){
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+}
+
+@mixin font-semibold-italic(){
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}

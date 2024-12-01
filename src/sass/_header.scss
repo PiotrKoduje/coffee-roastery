@@ -90,6 +90,10 @@
       text-decoration: none;
       color: $color-light;
       letter-spacing: 1px;
+
+      &.active{
+        color: $color-main;
+      }
     }
   }
 

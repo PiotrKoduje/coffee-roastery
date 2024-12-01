@@ -1,0 +1,125 @@
+.contact-wrapper{
+  @include flex(column, center, flex-start);
+  color: $color-dark;
+  height: 100vh;
+
+  .contact-form{
+    text-align: center;
+    padding: 20px 40px;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .contact-header{
+    @include font-semibold;
+    font-size: 45px;
+    text-transform: uppercase;
+    color: $color-main;
+    letter-spacing: 5px;
+    position: relative;
+
+    &:after{
+      position: absolute;
+      content: '';
+      top: 120%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 450px;
+      height: 3px;
+      background-color: $color-main;
+    }
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  input, textarea {
+    font-family: $font-main;
+    width: 80%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 2px solid;
+    margin: 0 auto;
+    resize: none;
+  }
+
+  button {
+    @include font-semibold;
+    font-size: 20px;
+    background-color: $color-main;
+    color: $color-light;
+    padding: 15px 25px;
+    margin: 35px auto;
+    border: solid 2px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: $transition;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: $color-light;
+    color: $color-main;
+  }
+}
+
+/*Media*/
+@media (max-width: 992px){
+  .contact-wrapper .contact-header{
+    font-size: 40px;
+
+    &:after{
+      width: 400px;
+    }
+  }
+
+  .contact-wrapper label{
+    font-size: 18px;
+    margin: 15px 0;
+  }
+
+  .contact-wrapper input,
+  .contact-wrapper textarea{
+    padding: 8px;
+  }
+
+  .contact-wrapper button{
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 25px auto;
+  }
+}
+
+@media (max-width: 576px){
+  .contact-wrapper .contact-header{
+    font-size: 30px;
+  }
+
+  .contact-wrapper label{
+    font-size: 16px;
+    margin: 15px 0;
+    letter-spacing: 1px;
+  }
+
+  .contact-wrapper input,
+  .contact-wrapper textarea{
+    padding: 10px;
+  }
+
+  .contact-wrapper button{
+    padding: 8px 15px;
+    font-size: 16px;
+    margin: 25px auto;
+  }
+}

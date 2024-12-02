@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;600italic;700;900&display=swap&subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -41,16 +42,15 @@
       <div class="home-wrapper"></div>
     </section>
     <section id="products">
-      <h1 class="section-header">products</h1>
       <div id="product-list" class="products-wrapper"></div>
     </section>
     <section id="contact">
-      <h1 class="section-header">Contact Us</h1>
       <div class="contact-wrapper"></div>
     </section>
   </div>
 
   <script id="template-contact" type="text/x-handlebars-template">
+    <h1 class="section-header">contact us</h1>
     <div class="contact-form">
       <form class="contact-us">
         <label for="name">name</label>
@@ -73,7 +73,8 @@
   <script id="template-products" type="text/x-handlebars-template">
     
     <div class="products-container">
-    {{#each this}}
+      <h1 class="section-header">products</h1>
+      {{#each this}}
       <div class="product-container">
         <div class="product-content">
           <h1 class="product-title">0{{id}}. {{title}}</h1>
@@ -98,14 +99,60 @@
       </div>
       {{/each}}
       
-      
       <div class="main-footer">
         <p>&copy; 2021 EL TIGRE inc.</p>
       </div>
     </div>
     </script>
 
+    <script id="template-about" type="text/x-handlebars-template">
+      <div class="carousel-container">
+        <div class="carousel-wrapper">
+          <h1 class="section-header">about us</h1>
+          <div class="carousel">
+            <div class="carousel-cell">
+              <div class="image">
+                <img src="images/3.webp" alt="">
+              </div>
+              <div class="content">
+                <p class="team-member">Elizabeth <span>Doherty</span></p>
+                <p class="description">
+                  Experienced barista from Bahamas. She says that Venezuela has opened her yeys on coffee."It's not about the tase", she says. "It's all about the feelings".
+                </p>
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <div class="image">
+                <img src="images/2.webp" alt="">
+              </div>
+              <div class="content">
+                <p class="team-member">Max <span>Selfish</span></p>
+                <p class="description">
+                  Max is the austrian barista with years of experience from the hotels across the whole Europe. "Venezuela coffee was a lightening experience for me! I have never drink such an amazing coffee", he says.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <div class="image">
+                <img src="images/1.webp" alt="">
+              </div>
+              <div class="content">
+                <p class="team-member">Ping <span>Nihao</span></p>
+                <p class="description">
+                  Ping is the youngest in the team. He doesn't like calling coffee a mysterious act. He says, a good coffee is lika a mathematical formula. Once you figured it out, every coffee you make is a masterpiece.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-footer home-footer">
+          <p>&copy; 2021 EL TIGRE inc.</p>
+        </div>
+      </div>
+    </script>
+    
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="js/app.js" type="module"></script>
 </body>
 </html>

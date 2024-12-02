@@ -1,6 +1,7 @@
 import {settings, select, classNames } from './settings.js';
 import Contact from './contact.js';
 import Product from './product.js';
+import Home from './home.js';
 
 
 const app = {
@@ -20,6 +21,7 @@ const app = {
       .then((parsedResponse) => {
         this.data.products = parsedResponse;
         this.initProducts();
+        this.initHome();
       });
   },
 
@@ -70,8 +72,12 @@ const app = {
   },
 
   initProducts(){
-    new Product(this.data.products);
+    this.products = new Product(this.data.products);
   },
+
+  initHome(){
+    this.home = new Home(this.data.products);
+  }
 };
 
 app.init();

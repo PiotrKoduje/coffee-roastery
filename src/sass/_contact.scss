@@ -1,69 +1,48 @@
 .contact-wrapper{
   @include flex(column, center, flex-start);
   color: $color-dark;
-  height: 100vh;
 
   .contact-form{
     text-align: center;
     padding: 20px 40px;
     width: 100%;
-    max-width: 500px;
+    max-width: 640px;
   }
 
-  .contact-header{
-    @include font-semibold;
-    font-size: 45px;
-    text-transform: uppercase;
-    color: $color-main;
-    letter-spacing: 5px;
-    position: relative;
-
-    &:after{
-      position: absolute;
-      content: '';
-      top: 120%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 450px;
-      height: 3px;
-      background-color: $color-main;
-    }
-  }
-  
   form {
     display: flex;
     flex-direction: column;
   }
 
   label {
-    font-size: 20px;
+    font-size: 28px;
     font-weight: bold;
     text-align: center;
-    margin: 20px 0;
+    margin: 25px 0;
     letter-spacing: 2px;
     text-transform: uppercase;
   }
   
   input, textarea {
     font-family: $font-main;
-    width: 80%;
-    padding: 15px;
+    width: 90%;
+    padding: 20px;
     margin-bottom: 15px;
-    border: 2px solid;
+    border: 3px solid;
     margin: 0 auto;
     resize: none;
   }
 
   button {
-    @include font-semibold;
-    font-size: 20px;
+    @include font-bold;
+    font-size: 26px;
     background-color: $color-main;
     color: $color-light;
-    padding: 15px 25px;
-    margin: 35px auto;
+    padding: 25px 55px;
+    margin: 40px auto;
     border: solid 2px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     transition: $transition;
     cursor: pointer;
   }
@@ -76,14 +55,6 @@
 
 /*Media*/
 @media (max-width: 992px){
-  .contact-wrapper .contact-header{
-    font-size: 40px;
-
-    &:after{
-      width: 400px;
-    }
-  }
-
   .contact-wrapper label{
     font-size: 18px;
     margin: 15px 0;
@@ -92,6 +63,7 @@
   .contact-wrapper input,
   .contact-wrapper textarea{
     padding: 8px;
+    border: 2px solid;
   }
 
   .contact-wrapper button{
@@ -102,10 +74,6 @@
 }
 
 @media (max-width: 576px){
-  .contact-wrapper .contact-header{
-    font-size: 30px;
-  }
-
   .contact-wrapper label{
     font-size: 16px;
     margin: 15px 0;

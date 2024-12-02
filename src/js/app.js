@@ -1,5 +1,7 @@
 import {settings, select, classNames } from './settings.js';
 import Contact from './contact.js';
+import Product from './product.js';
+
 
 const app = {
   init: function(){
@@ -17,6 +19,7 @@ const app = {
       })
       .then((parsedResponse) => {
         this.data.products = parsedResponse;
+        this.initProducts();
       });
   },
 
@@ -64,7 +67,11 @@ const app = {
   initContact(){
     const contactContainer = document.querySelector(select.containerOf.contact);
     this.contact = new Contact(contactContainer);
-  }
+  },
+
+  initProducts(){
+    new Product(this.data.products);
+  },
 };
 
 app.init();

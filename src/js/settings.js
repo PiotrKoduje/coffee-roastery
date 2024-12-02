@@ -10,6 +10,7 @@ export const select = {
   containerOf: {
     pages: '#pages',
     contact: '.contact-wrapper',
+    products: '.products-wrapper',
   },
 
   nav: {
@@ -18,6 +19,7 @@ export const select = {
 
   templateOf: {
     contact: '#template-contact',
+    products: '#template-products',
   },
 
   contact: {
@@ -39,4 +41,5 @@ export const classNames = {
 
 export const templates = {
   contact: Handlebars.compile(document.querySelector(select.templateOf.contact).innerHTML),
+  products: Handlebars.compile(document.querySelector(select.templateOf.products).innerHTML),
 };

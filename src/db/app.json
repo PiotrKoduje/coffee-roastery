@@ -16,7 +16,7 @@
       "image": "<img class=\"product-photo\" src=\"images/coffee-2.webp\">",
       "roasting": "8/10",
       "intensity": "9/10",
-      "mostPopular": false
+      "mostPopular": true
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "image": "<img class=\"product-photo\" src=\"images/coffee-3.webp\">",
       "roasting": "3/10",
       "intensity": "7/10",
-      "mostPopular": false
+      "mostPopular": true
     }
   ],
 

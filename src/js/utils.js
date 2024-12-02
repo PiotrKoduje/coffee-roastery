@@ -10,3 +10,9 @@ utils.formatDate = function(date) {
 
   return `${day}.${month}.${year} ${hours}:${minutes}:${seconds}`;
 };
+
+utils.createDOMFromHTML = function(htmlString) {
+  let div = document.createElement('div');
+  div.innerHTML = htmlString.trim();
+  return div.firstChild;
+};

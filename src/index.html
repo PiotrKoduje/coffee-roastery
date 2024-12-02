@@ -41,16 +41,17 @@
       <div class="home-wrapper"></div>
     </section>
     <section id="products">
-      <div id="product-list" class="product-list"></div>
+      <h1 class="section-header">products</h1>
+      <div id="product-list" class="products-wrapper"></div>
     </section>
     <section id="contact">
+      <h1 class="section-header">Contact Us</h1>
       <div class="contact-wrapper"></div>
     </section>
   </div>
 
   <script id="template-contact" type="text/x-handlebars-template">
     <div class="contact-form">
-      <h1 class="contact-header">Contact Us</h1>
       <form class="contact-us">
         <label for="name">name</label>
         <input type="text" id="name" name="name">
@@ -64,7 +65,45 @@
         <button type="submit">submit</button>
       </form>
     </div>
+    <div class="main-footer">
+      <p>&copy; 2021 EL TIGRE inc.</p>
+    </div>
   </script>
+
+  <script id="template-products" type="text/x-handlebars-template">
+    
+    <div class="products-container">
+    {{#each this}}
+      <div class="product-container">
+        <div class="product-content">
+          <h1 class="product-title">0{{id}}. {{title}}</h1>
+          <p class="product-description">
+            {{description}}
+          </p>
+          <div class="details-wrapper">
+            <div class="details">
+              <p>roasting: <span>{{roasting}}</span></p>
+              <p>intensity: <span>{{intensity}}</span></p>
+            </div>
+            <div class="most-popular">
+              {{#if mostPopular}}
+              <img src="images/laur.webp" alt="">
+              {{/if}}
+            </div>
+          </div>
+        </div>
+        <div class="product-photo">
+          {{{image}}}
+        </div>
+      </div>
+      {{/each}}
+      
+      
+      <div class="main-footer">
+        <p>&copy; 2021 EL TIGRE inc.</p>
+      </div>
+    </div>
+    </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="js/app.js" type="module"></script>

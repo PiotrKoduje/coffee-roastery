@@ -1,0 +1,69 @@
+body {
+  overflow-y: scroll;
+  line-height: 1.7;
+}
+
+body::-webkit-scrollbar {
+  display: none; 
+}
+
+#contact,
+#products,
+#home{
+  display: none;
+
+  &.active{
+    display: block;
+  }
+}
+
+.main-footer p{
+  font-size: 16px;
+  @include font-semibold;
+  margin-top: 50px;
+  text-align: center;
+  color: #777;
+}
+
+
+.section-header{
+  @include font-bold;
+  font-size: 80px;
+  text-transform: uppercase;
+  color: $color-main;
+  letter-spacing: 10px;
+  position: relative;
+  text-align: center;
+
+  &:after{
+    position: absolute;
+    content: '';
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 5px;
+    background-color: $color-main;
+  }
+}
+
+@media (max-width: 992px){
+  .section-header{
+    font-size: 60px;
+    letter-spacing: 7px;
+
+    &:after{
+      width: 500px;
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .section-header{
+    font-size: 40px;
+
+    &::after{
+      width: 300px;
+    }
+  }
+}

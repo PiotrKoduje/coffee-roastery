@@ -27,8 +27,8 @@
         </div>
       </div>
       <h1 class="main-title">
-        <span class="first-line">home of</span>
-        <span class="second-line">original tastes</span>
+        <span class="first-line">&nbsp;</span>
+        <span class="second-line">&nbsp;</span>
       </h1>
       <div class="footer">
         <p>discover</p>
@@ -36,6 +36,7 @@
       </div>
     </div>
   </header>
+  <i class="icon-scrollToTop"></i>
 
   <div id="pages">
     <section id="home">
@@ -71,7 +72,6 @@
   </script>
 
   <script id="template-products" type="text/x-handlebars-template">
-    
     <div class="products-container">
       <h1 class="section-header">products</h1>
       {{#each this}}
@@ -95,6 +95,10 @@
         </div>
         <div class="product-photo">
           {{{image}}}
+          <div class="promotion">
+            <p class="old-price">{{oldPrice}}$</p>
+            <p class="current-price">{{currentPrice}}$</p>
+          </div>
         </div>
       </div>
       {{/each}}
@@ -112,7 +116,7 @@
           <div class="carousel">
             <div class="carousel-cell">
               <div class="image">
-                <img src="images/3.webp" alt="">
+                <img src="images/3.webp" alt="team-member-3">
               </div>
               <div class="content">
                 <p class="team-member">Elizabeth <span>Doherty</span></p>
@@ -123,7 +127,7 @@
             </div>
             <div class="carousel-cell">
               <div class="image">
-                <img src="images/2.webp" alt="">
+                <img src="images/2.webp" alt="team-member-2">
               </div>
               <div class="content">
                 <p class="team-member">Max <span>Selfish</span></p>
@@ -134,7 +138,7 @@
             </div>
             <div class="carousel-cell">
               <div class="image">
-                <img src="images/1.webp" alt="">
+                <img src="images/1.webp" alt="team-member-1">
               </div>
               <div class="content">
                 <p class="team-member">Ping <span>Nihao</span></p>
@@ -150,7 +154,7 @@
         </div>
       </div>
     </script>
-    
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="js/app.js" type="module"></script>

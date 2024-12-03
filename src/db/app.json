@@ -7,7 +7,9 @@
       "image": "<img class=\"product-photo\" src=\"images/coffee-1.webp\">",
       "roasting": "5/10",
       "intensity": "6/10",
-      "mostPopular": true
+      "mostPopular": true,
+      "oldPrice": 37,
+      "currentPrice": 25
     },
     {
       "id": 2,
@@ -16,18 +18,28 @@
       "image": "<img class=\"product-photo\" src=\"images/coffee-2.webp\">",
       "roasting": "8/10",
       "intensity": "9/10",
-      "mostPopular": false
+      "mostPopular": false,
+      "oldPrice": 28,
+      "currentPrice": 21
     },
     {
       "id": 3,
       "title": "la cucaracha",
       "description": "Sweet and intense with a big amount of different flavors. Caramel, grapes, strawberry, you name it! It's great choice for warm summer days.",
-      "image": "<img class=\"product-photo\" src=\"images/coffee-3.webp\">",
+      "image": "<img class=\"product-photo\" src=\"images/coffee-3.webp\" alt=\"product photo\">",
       "roasting": "3/10",
       "intensity": "7/10",
-      "mostPopular": false
+      "mostPopular": false,
+      "oldPrice": 25,
+      "currentPrice": 19
     }
   ],
 
-  "messages": []
+  "messages": [],
+
+  "mainTitles":[
+    "Home of Original Tastes",
+    "Real Venezuela, Real Coffee",
+    "Taste Real Venezuela"
+  ]
 } 

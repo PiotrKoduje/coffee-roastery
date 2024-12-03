@@ -3,6 +3,7 @@ export const settings = {
     url: '//localhost:3131',
     products: 'products',
     messages: 'messages',
+    mainTitles: 'mainTitles'
   },
 };
 
@@ -12,6 +13,7 @@ export const select = {
     contact: '.contact-wrapper',
     products: '.products-wrapper',
     home: '.home-wrapper',
+    carousel: '.carousel-container',
   },
 
   nav: {
@@ -24,12 +26,19 @@ export const select = {
     about: '#template-about',
   },
 
+  header: {
+    firstLine: '.first-line',
+    secondLine: '.second-line',
+    scrollToTop: '.icon-scrollToTop',
+  },
+
   contact: {
     name: '[name="name"]',
     title: '[name="title"]',
     message: '[name="message"]',
     submit: '[type="submit"]',
   },
+
   home: {
     footer: '.main-footer',
     homeWrapper: '.home-wrapper',

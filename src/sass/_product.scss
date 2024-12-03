@@ -28,8 +28,10 @@
 
 .product-photo{
   flex: 1 1 calc(50% - 40px);
-  max-height: 400px;
   position: relative;
+  max-height: 400px;
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.25), 
+              10px 10px 30px rgba(0, 0, 0, 0.2);
   
   img{
     width: 100%;
